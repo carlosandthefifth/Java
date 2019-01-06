@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SimpleArraySum",
+            "request": "launch",
+            "mainClass": "SimpleArraySum"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - helloworld",
             "request": "launch",
             "mainClass": "helloworld"
