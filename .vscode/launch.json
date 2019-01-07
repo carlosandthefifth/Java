@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - compareTheTriplets",
+            "request": "launch",
+            "mainClass": "compareTheTriplets"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SimpleArraySum",
             "request": "launch",
             "mainClass": "SimpleArraySum"
