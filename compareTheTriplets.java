@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 
 public class  compareTheTriplets {
 
@@ -9,22 +9,25 @@ public class  compareTheTriplets {
     } 
 
     public static void main(String[] args) {
-        int[] anArray = new int[10];
-        int[] anArray2 = new int[10];     
+        List<Integer> anArray = new ArrayList<Integer>();
+        List<Integer> anArray2 = new ArrayList<Integer>();
+        
+        int max = 100;
+        int min = 1; 
 
-       Random rand = new Random();
+       Random rand = new Random(max - min + 1);
 
         for (int i = 0; i < 10; i++) {
-            anArray[i] = rand.nextInt();
+            anArray.add(rand.nextInt(max - min + 1));
         }
 
         for (int i = 0; i < 10; i++) {
-            anArray2[i] = rand.nextInt();
+            anArray2.add(rand.nextInt(max - min + 1));
         }
 
         for (int i = 0; i <10; i++) {
-            System.out.println("a1["+i+"]: " + anArray[i]);
-            System.out.println("a2["+i+"]: " + anArray2[i]);
+            System.out.println("a1["+i+"]: " + anArray.get(i));
+            System.out.println("a2["+i+"]: " + anArray2.get(i));
         }
 
         int Alice = 0;
@@ -32,7 +35,7 @@ public class  compareTheTriplets {
         
         for (int ax = 0; ax < 10; ax++){
             for (int bx = 0; bx < 10; bx++){
-                int result = compareArray(anArray[ax], anArray2[bx]);
+                int result = compareArray(anArray.get(ax), anArray2.get(bx));
                 if (result==1) Alice++;
                 if (result==0) Bob++;
             }
